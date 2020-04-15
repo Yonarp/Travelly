@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: 2.6rem;
+
+}
+
+
+h2{
+  font-size: 4rem;
+}
+
+h3{
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+
+
+li,button,label,input,p{
+    font-size: 2rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+button{
+    padding: 2rem 4rem;
+    color: white;
+    background:#4c6e97;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: .2rem;
+    transition: all .1s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+button::after{
+    position: absolute;
+    content: '';
+    height: 250%;
+    bottom:-20%;
+    left: -100%;
+    opacity: 0.3;
+    width: 10rem;
+    background: linear-gradient(to left , white , transparent);
+    z-index: 1;
+    transform: rotate(10deg);
+   
+}
+button::before{
+    position: absolute;
+    content: '';
+    height: 250%;
+    bottom:-20%;
+    left: -100%;
+    opacity: 0.3;
+    width: 10rem;
+    background: linear-gradient(to left , white , transparent);;
+    z-index: 1;
+    transform: rotate(10deg);
+
+    
+}
+button:hover{
+    transform: translateY(-10%) scale(1.1);
+    border-radius: 1rem;
+    background:#2e435e
+}
+
+button:hover::after{
+    animation: button .6s;
+
+}
+
+button:hover::before{
+    animation: button .9s 0.25s;
+} 
+
+/*-------------------Nav Bar section--------------------------------*/
+    .main-head{
+        background: #131c27;
+        color: white;
+    }
+    
+    #logo{
+        flex: 3 1 40rem;
+        font-family: 'Pattaya', sans-serif;
+        font-weight: 400;
+    }
+
+    nav{
+        min-height: 10vh;
+        padding: 2rem;
+        width: 90%;
+        align-items: center;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+    
+    nav ul{
+        display: flex;
+        flex: 1 1 40rem;
+        list-style: none;
+        justify-content: space-evenly;
+}
+
+
+
+/*--------Hero Section-------*/
+
+.hero{
+    color: white;
+    min-height: 90vh;
+    background:   linear-gradient(rgba(0,0,0,0.6) , transparent) , url(./img/landing-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.hero h3{
+    padding: 4rem 0rem;
+}
+
+/*---------------locations section-----------------------------*/
+
+#locations{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6) , transparent) ,url(./img/new-york-page.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.locations-head{
+    width: 90%;
+    margin: auto;
+}
+
+.locations-head h2{
+    text-decoration: underline;
+    font-weight: 400;
+    padding: 2rem 0rem;
+    text-transform: uppercase;
+}
+
+.locations-head h3{
+    background: linear-gradient(rgb(14, 13, 13) , rgb(156, 129, 129) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+
+.clouds{
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.moving-clouds-1{
+    animation: cloud-animation 3.5s infinite alternate;
+
+}
+.moving-clouds-2{
+    top: 18%;
+    z-index: -1;
+    opacity: 0.7;
+    animation: cloud-animation 4.5s infinite alternate;
+}
+
+
+
+
+/*-------BENEFITS SECTION----------------------*/
+
+.benefits-head{
+    min-height: 30vh;
+    padding: 2rem 0rem;
+    color: white;
+    background: #2e435e;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.benefits-head h3{
+    padding: 1rem 0rem;
+}
+
+.cards{
+   
+    display: flex;
+    width: 90%;
+    min-height: 70vh;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    background: rgb(156, 129, 129);
+    min-height: 40vh;
+    flex: 1 1 25rem;
+    margin: 2rem 4rem;
+}
+
+.card img{
+    height: 150px;
+}
+
+/*--------------responsiveness---------*/
+
+@media screen and (max-width:888px)
+{
+
+    html{
+        font-size: 45%;
+    }
+    nav{
+        text-align: center;
+        
+    }
+    #logo{
+        padding: 2rem 1rem;
+    }
+
+    .clouds{
+        height: 40rem;
+    }
+
+    .moving-clouds-1{
+        z-index: -1;
+    }
+    .moving-clouds-2{
+        z-index: -2;
+        top:10%;
+    }
+
+    .locations-head h3{
+        background: linear-gradient(rgba(20, 30, 43, 0.7) , rgba(47, 74, 109, 0.7));
+        color: white;
+        font-weight: 200;
+        font-size: 2.6rem;
+        padding: 2rem;
+        border-radius: .7rem;
+    }
+}
+
+
+
+
+
+
+/*-------------------ANIMATIONS--------------------*/
+
+
+@keyframes cloud-animation
+{
+    from{
+        transform: translate(10%,-10%);
+    }
+
+    to{
+        transform: translate(0%,0%);
+    }
+
+    
+}
+
+@keyframes button{
+    from{
+        left: -10rem;
+    }
+
+    to{
+        left: 150%;
+    }
+}
