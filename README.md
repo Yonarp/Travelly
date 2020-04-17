@@ -1,2 +1,2 @@
 # Travelly
- A fictatious Travel website created to try out flexbox
+ Website for a fictitious Travel company (Travelly)
