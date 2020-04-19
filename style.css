@@ -30,6 +30,10 @@ h3{
     font-weight: 200;
 }
 
+h4{
+    font-size: 2.8rem;
+}
+
 
 
 li,button,label,input,p{
@@ -220,6 +224,7 @@ button:hover::before{
 
 .benefits-head h3{
     padding: 1rem 0rem;
+    padding: 1rem 1rem;
 }
 
 .cards{
@@ -233,14 +238,34 @@ button:hover::before{
 }
 .card{
     background: rgb(156, 129, 129);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    text-align: center;
     min-height: 40vh;
     flex: 1 1 25rem;
+    flex: 1 1 30rem;
+    border-radius: 5px;
     margin: 2rem 4rem;
+    transition: all 0.3s ease-in-out;
 }
-
+.img-section{
+    width: 100%;
+    border-radius: 5px;
+    background: #2e435e;
+}
 .card img{
     height: 150px;
+    max-width: 15%;
+    padding: 2rem 0rem;
+
 }
+.card h4, .card p{
+    padding: 2rem;
+}
+
+.card:hover{
+    transform: translateY(-2rem);
+}
+
 
 /*--------------responsiveness---------*/
 
