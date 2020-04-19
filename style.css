@@ -223,7 +223,6 @@ button:hover::before{
 }
 
 .benefits-head h3{
-    padding: 1rem 0rem;
     padding: 1rem 1rem;
 }
 
@@ -237,11 +236,9 @@ button:hover::before{
     flex-wrap: wrap;
 }
 .card{
-    background: rgb(156, 129, 129);
     box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
     text-align: center;
     min-height: 40vh;
-    flex: 1 1 25rem;
     flex: 1 1 30rem;
     border-radius: 5px;
     margin: 2rem 4rem;
@@ -253,7 +250,6 @@ button:hover::before{
     background: #2e435e;
 }
 .card img{
-    height: 150px;
     max-width: 15%;
     padding: 2rem 0rem;
 
