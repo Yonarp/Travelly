@@ -53,7 +53,6 @@ button{
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    border-radius: .2rem;
     transition: all .1s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
@@ -260,6 +259,103 @@ button:hover::before{
 
 .card:hover{
     transform: translateY(-2rem);
+}
+
+/*---------------------FORM SECTION-------------------------------*/
+#contact{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6) , transparent) ,url(./img/contact-mountain.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper{
+    background: rgba(37, 58, 87, 0.8);
+    width: 60%;
+    border-radius: 2rem;
+    text-align: center;
+    color: white;
+
+}
+
+.form-head{
+    padding: 3rem;
+}
+
+.name-form , .email-form{
+    padding: 3rem;
+}
+label{
+    padding: 0rem 3rem;
+}
+input{
+    background: rgba(64, 119, 190, 0.7);
+    border: none;
+    color: white;
+    width: 35%;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+}
+
+
+.form-wrapper button{
+    width: 100%;
+    margin-top: 8rem;
+    padding: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+
+.form-wrapper button:hover{
+    transform: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.form-wrapper button:hover::before,.form-wrapper button:hover::after{
+    animation: none;
+}
+
+
+
+/*-------------------FOOOTER SECTION-----------------------*/
+
+footer{
+    background: #131c27;
+    color: white;
+}
+.footer-wrapper{
+    min-height: 10vh;
+    display: flex;
+    width: 90%;
+    padding: 2rem;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+
+}
+.footer-content{
+    flex: 3 1 40rem;
+    padding: 2rem;    
+}
+
+.footer-content p {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+footer ul{
+list-style: none;
+flex: 1 1 40rem;
+display: flex;
+padding: 2rem;
+justify-content: space-evenly;
+align-items: center;
 }
 
 
